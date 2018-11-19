@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo yum install -y git
+sudo yum install -y wget
+sudo yum install -y unzip
+sudo yum install -y java

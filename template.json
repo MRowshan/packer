@@ -1,12 +1,24 @@
 {
-    "builders": [
+	"builders": [
 			{
 				"type": "googlecompute",
-   	    			"account_file": "/home/mustakimrowshan/.gcpkey/key.json",
-				"project_id": "vm-testing-219509",
-				"source_image_family": "centos-7",
-				"ssh_username": "packer",
-				"zone": "europe-west2-c"
+   	    			"account_file": "{{user `account_file`}}",
+				"project_id": "{{user `project_id`}}",
+				"source_image_family": "{{user `source_image`}}",
+				"ssh_username": "{{user `ssh_username`}}",
+				"zone": "europe-west2-c",
+				"image_name": "{{user `image_name`}}"
        			}
-		]
+	],
+
+	"provisioners": [
+			{
+				"type":"shell",
+				"scripts":[
+					"scripts/packages-install",
+					"scripts/go-script",
+					"scripts/jenkins-script"
+				]
+			}
+	]
 }
