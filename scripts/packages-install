@@ -3,4 +3,5 @@
 sudo yum install -y git
 sudo yum install -y wget
 sudo yum install -y unzip
-sudo yum install -y java
+sudo yum install -y docker
+sudo yum install -y ansible

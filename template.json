@@ -14,11 +14,7 @@
 	"provisioners": [
 			{
 				"type":"shell",
-				"scripts":[
-					"scripts/packages-install",
-					"scripts/go-script",
-					"scripts/jenkins-script"
-				]
+				"scripts": "{{ user `scripts` }}"
 			}
 	]
 }
