@@ -3,5 +3,6 @@
 	"project_id": "vm-testing-219509",
 	"source_image": "centos-7",
 	"ssh_username": "packer",
-	"image_name": "time-{{timestamp}}"
+	"image_name": "packer"
+
 }
