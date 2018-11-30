@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo yum install -y wget unzip
 remote_zip="https://releases.hashicorp.com/packer/1.3.2/packer_1.3.2_linux_amd64.zip"
 local_zip="/tmp/packer.zip"
 wget "${remote_zip}" -O "${local_zip}"
